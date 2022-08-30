@@ -5,7 +5,8 @@ REST API to extract betting slip info from various betting providers using the b
 Below is guide on how to use the api, it returns a json response which contains the bet info in a listed booking code from a betting site.
 
 ### Listed providers
-- [x] `sportybet`
+- [x] `sportybet` <br>
+
 **TODO's**
 - [ ] Bet9ja
 - [ ] BetKing
