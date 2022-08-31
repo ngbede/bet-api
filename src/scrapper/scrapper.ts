@@ -43,11 +43,13 @@ export async function sportyBetScapper(betCode: string): Promise<Object> {
 
         games.push(game)       
       })
+      console.log(games)
+      console.log(totalOdds)
 
       odds.totalOdds = $('.total-odds').text()//.split(' ')[2] || null
       odds.maxBonus = $('.bonus').text()//.split(' ')[1] || null
       odds.potentialWin = $('.m-value').text()//.replace(/(\s+)/g, ' ') || null    
-      await browser.close()
+      // await browser.close()
       return { provider: 'SportyBet', games, totalOdds: totalOdds.toFixed(2) }
     } catch (error) {
       console.error(error)
