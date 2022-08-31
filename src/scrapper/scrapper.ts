@@ -10,7 +10,7 @@ export async function sportyBetScapper(betCode: string): Promise<Object> {
     let totalOdds: number = 1
     try {
       const browser = await puppeteer.launch({
-        headless: false, args: ['--headless'] 
+        headless: true, args: ['--no-sandbox'] 
       })
       const page = await browser.newPage()
       await page.goto(Config.sportyBetCodeUrl)
